@@ -5,7 +5,6 @@
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.3/jsxgraphcore.js' type='text/javascript'></script>
 <script type="text/javascript" src="core.js"></script>
 <script type="text/javascript" src="help.js"></script>
-
 </head>
 <body>
 <div style="width:470px; background:#eeeeee; border: #999999 2px solid; padding: 3px 3px 3px 3px; margin-left:auto; margin-right:auto;">
@@ -17,8 +16,9 @@ JXG.Options.board.showCopyright = false;
 JXG.Options.point.showInfoBox = false;
 
 var guiyy = new JSXGraph_GUI("box", false); // box is id of DOM containter (div) for jxgbox
-guiyy.addCommands("icons", [_ARROW_, _ERASE_, _POINT_, _LINE_, _CIRCLE_]); // icons is id of DOM container (div) for icons
-guiyy.board.setBoundingBox([0, 30, 42, 0]); // set bounding box
+guiyy.language = "slo";
+guiyy.addCommands("icons", [_ARROW_, _ERASE_, _POINT_, _LINE_, _CIRCLE_, _SYMMETRY_]); // icons is id of DOM container (div) for icons
+guiyy.board.setBoundingBox([0, 30, 45, 0]); // set bounding box
 guiyy.magnetSize = 2; // magnet size = 2
 
 
