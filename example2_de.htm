@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" charset="UTF-8"
+ src="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraphcore.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraph.css" />
+
+<script type="text/javascript" src="core.js"></script>
+<script type="text/javascript" src="help.js"></script>
+</head>
+<body>
+<div style="width:800px; background:#eeeeee; border: #999999 2px solid; padding: 3px 3px 3px 3px; margin-left:auto; margin-right:auto;">
+    <div id="icons" align="left" width="100%"></div>
+    <div id="box" class="jxgbox" style="width:800px; height:400px"></div>
+</div>
+<script type="text/javascript">
+JXG.Options.board.showCopyright = false;
+JXG.Options.point.showInfoBox = false;
+
+var guiyy = new JSXGraph_GUI("box", false); // box is id of DOM containter (div) for jxgbox
+guiyy.language = "de";
+guiyy.addCommands("icons", [_ARROW_, _ERASE_, _PENCIL_, _POINT_, _SEGMENT_, _HLINE_, _LINE_, _CIRCLE_, _POLYGON_, _REGULAR_POLYGON_, _SYMMETRY_]); // icons is id of DOM container (div) for icons
+guiyy.board.setBoundingBox([0, 40, 80, 0]); // set bounding box
+guiyy.magnetSize = 2; // magnet size = 2
+
+
+var A = guiyy.board.create("point", [7, 21], {name:'A', fixed:true, label:{offset:[3, 20]}}); // point, fixed, non-erasable
+var B = guiyy.board.create("point", [22, 21], {name:'B', fixed:false, id:"_STATIC_1", highlight:true, label:{offset:[3, 20]}}); // point, non-fixed, non-erasable
+var C = guiyy.board.create("point", [14, 13], {name:'C', fixed:false, highlight:true, label:{offset:[3, 20]}}); // point, non-fixed, erasable
+
+</script>
+</body>
+</html>
